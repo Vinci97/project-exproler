@@ -1,0 +1,6 @@
+.Footer{
+    @include size(100%, 100px);
+    background:$green;
+    position: fixed;
+    bottom: 0;
+}
