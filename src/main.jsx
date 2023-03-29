@@ -10,14 +10,19 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import About from './pages/About';
+import Activity from './pages/Activity';
+import CityId from './pages/id/cityId/CityId';
+import MainLayout from './layouts/mainLayout';
+import ActivityId from './pages/id/activityId/ActivityId';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route element={<MainLayout/>}>
       <Route path="/" element={<Home />}/>
       <Route path="about" element={<About />}/>
-      <Route path="activity/:id" element={<h1>activity</h1>} />
-      <Route path="city/:id" element={<h1>city</h1>} />
+      <Route path="activity" element={<Activity/>} />
+      <Route path="activity/:id" element={<ActivityId/>} />
+      <Route path="city/:id" element={<CityId/>} />
     </Route>
   )
 )
