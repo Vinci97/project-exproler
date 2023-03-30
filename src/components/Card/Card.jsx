@@ -5,7 +5,7 @@ const Card =({data})=>{
     const navigate = useNavigate();
 
     const onHandleClick = () => {
-        navigate(`/activities/${data.name}%27`);
+        navigate(`/activity/${data.name}%27`);
       };
     return(
         <div className={styles.Card} onClick={onHandleClick}>

@@ -6,8 +6,10 @@ function ActivityId(){
     const { id } = useParams()
     const [product, setProduct]=useState({})
       useEffect(() => {
-        GET(`activity?$filter=name%20eq%20%27${id}`).then((res) => setProduct(() => res.results));
+        GET(`activities?$filter=name%20eq%20%27${id}`).then((res) => 
+        setProduct(() => res.results[0]));
       }, []);
+      console.log(product)
     return(
         <div className={styles.ActivityId}>
             {product.name ? (
@@ -15,7 +17,7 @@ function ActivityId(){
             <Link to="/activity">
                <button>X</button>
             </Link>
-            <img className={styles.image} src={product.image} alt={product.name} />
+            <img className={styles.image} src={product.image.url} alt={product.name} />
             <div className={styles.content}>
                 <h3 className={styles.title}>{product.name}</h3>
                 <p>{product.description}</p>
