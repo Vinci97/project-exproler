@@ -9,7 +9,6 @@ function ActivityId(){
         GET(`activities?$filter=name%20eq%20%27${id}`).then((res) => 
         setProduct(() => res.results[0]));
       }, []);
-      console.log(product)
     return(
         <div className={styles.ActivityId}>
             {product.name ? (
@@ -20,14 +19,15 @@ function ActivityId(){
             <img className={styles.image} src={product.image.url} alt={product.name} />
             <div className={styles.content}>
                 <h3 className={styles.title}>{product.name}</h3>
-                <p>{product.description}</p>
-                <p>{product.rating.rate}</p>
-                <p>{product.rating.count}</p>
-                <p className={styles.price}>${product.price}</p>
+                <p>{product.telephone}</p>
+                <p>{product.address.addressLocality}</p>
+                <p>{product.address.addressRegion}</p> 
+                <p>{product.address.addressCountry}</p> 
+                <p className={styles.price}>{product.price}</p>
             </div>
             </>
             ) : (
-                <h2>Al momento il prodotto non è disponibile</h2>
+                <h2>seleziona un altra activity</h2>
             )}
         </div>
     )
