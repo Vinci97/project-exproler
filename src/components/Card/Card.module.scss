@@ -1,0 +1,30 @@
+.Card{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: $yellow;
+    .image{
+        border-radius: 20px 20px 0 0 ;
+        object-fit: cover;
+        height: 50%;
+        width: 250px;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+    }
+    &:hover{
+        transition: all 0.35s;
+        box-shadow:-5px -5px  $dark ;
+        transform: scale(0.9);
+        cursor:pointer ;
+    }
+}

@@ -7,11 +7,12 @@ export default function Activity(){
         fetch("https://fakestoreapi.com/products")
         .then(res => res.json()).then((data)=> setProducts(data))
     },[])
-    const filterList = (list, category) => list.filter(item=>item.category === category)
+    const filterList = (list, category) => list.filter((item)=>item.category === category)
     return(
         <div className={styles.Activity}>
             <h1>ELETTRONICA</h1>
-            <CardList data={filterList(products, "eletronics")}/>
+            <CardList data={filterList(products, "electronics")}/>
+
         </div>
     )
 }

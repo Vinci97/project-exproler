@@ -1,0 +1,10 @@
+.MainLayout{
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-bottom: 100px;
+    .content{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

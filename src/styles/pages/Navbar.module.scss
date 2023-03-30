@@ -1,4 +1,19 @@
 .Navbar{
    @include size(100%, 150px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
    background:$green;
-}
+   .NavbarContent{
+      display: flex;
+      gap: 50px;
+      li{
+         border-bottom: 1px solid;
+         :hover{
+            background: $dark;
+            color: $white;
+         }
+      };
+
+   };
+};
