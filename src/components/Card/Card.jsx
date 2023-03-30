@@ -5,14 +5,16 @@ const Card =({data})=>{
     const navigate = useNavigate();
 
     const onHandleClick = () => {
-      navigate(`/activity/${data.id}`);
-    };
+        navigate(`/attractions/${data.name}%27`);
+      };
+      console.log(data.name)
     return(
         <div className={styles.Card} onClick={onHandleClick}>
-            <img className={styles.image} src={data.image} alt={data.title} />
+            <img className={styles.image} src={data.image.url} alt={data.title} />
             <div className={styles.content}>
-                <h3 className={styles.title}>{data.title}</h3>
-                <p className={styles.price}>${data.price}</p>
+                <h3 className={styles.title}>{data.name}</h3>
+                <p className={styles.price}>{data.telephone}</p>
+                <p className={styles.price}>{data.address.addressCountry}</p>
             </div>
         </div>
     )

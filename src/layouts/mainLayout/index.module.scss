@@ -1,10 +1,17 @@
 .MainLayout{
-    height: 100vh;
-    overflow: hidden;
-    overflow-y: auto;
+    height: calc(100vh - 100px);
     margin-bottom: 100px;
     .content{
-        padding-left: 30px;
-        padding-right: 30px;
+        overflow-y: scroll;
+        height: calc(100vh - 249px);
+        padding: 30px;
     }
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $dark; 
+    border-radius: 50px;
+} 
