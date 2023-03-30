@@ -5,7 +5,7 @@ import { GET } from "../utils/http";
 export default function Activity(){
     const [products, setProducts] = useState([])
   useEffect(() => {
-    GET("attractions").then((res) => setProducts(() => res.results));
+    GET("activity").then((res) => setProducts(() => res.results));
   }, []);
     const filterList = (list, type) => 
     list.filter((item)=>item["@type"].includes(type) )

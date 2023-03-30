@@ -5,9 +5,8 @@ const Card =({data})=>{
     const navigate = useNavigate();
 
     const onHandleClick = () => {
-        navigate(`/attractions/${data.name}%27`);
+        navigate(`/activities/${data.name}%27`);
       };
-      console.log(data.name)
     return(
         <div className={styles.Card} onClick={onHandleClick}>
             <img className={styles.image} src={data.image.url} alt={data.title} />
