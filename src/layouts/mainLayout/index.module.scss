@@ -1,9 +1,8 @@
 .MainLayout{
-    height: calc(100vh - 100px);
-    margin-bottom: 100px;
+    height: 100vh;
     .content{
         overflow-y: scroll;
-        height: calc(100vh - 249px);
+        height: calc(100vh - 250px);
         padding: 30px;
     }
 }

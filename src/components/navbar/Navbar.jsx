@@ -8,7 +8,7 @@ const Navbar =()=>{
   const onHandleInput = (e)=> setInputValue(()=> e.target.value);
   const onHandelSubmit = (e) => {
     e.preventDefault();
-    navigate(`/city/${inputValue}`)
+    navigate(`/city/id?search=${inputValue}`)
     setInputValue(()=>"")
   }
   return(
