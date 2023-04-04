@@ -27,7 +27,7 @@ function ActivityId(){
             </div>
             </>
             ) : (
-                <h2>seleziona un altra activity</h2>
+                <h2>seleziona un altra attività</h2>
             )}
         </div>
     )
